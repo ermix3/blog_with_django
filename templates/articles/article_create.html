@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="display-1 text-center text-info my-3 fw-bold">Create New Article</h1>
+    <form method="post" action="{% url 'articles:create' %}" class="w-75 mx-auto" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-primary my-3 w-25">Submit</button>
+    </form>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'js/slugify.js' %}"></script>
+{% endblock %}

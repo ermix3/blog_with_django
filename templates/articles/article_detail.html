@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <h1 class="display-1 text-center text-info my-3 fw-bold">Article detail</h1>
+    <div class="article-detail">
+        <img src="{{ article.thumb.url }}" alt="">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.auth }}</p>
+        <small>{{ article.date }}</small>
+        <p>
+            {{ article.body }}
+        </p>
+    </div>
+{% endblock %}
