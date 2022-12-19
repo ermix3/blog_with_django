@@ -18,6 +18,7 @@ def article_detail(request, slug):
 
 
 # Create new article
+@login_required
 def article_create(request):
     if request.method == 'POST':
         form = CreateArticle(request.POST, request.FILES)
