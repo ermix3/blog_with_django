@@ -33,6 +33,7 @@ def article_create(request):
 
 
 # Update article
+@login_required
 def article_update(request, slug):
     article = Article.objects.get(slug=slug)
     if request.method == 'POST':
@@ -46,6 +47,7 @@ def article_update(request, slug):
 
 
 # Delete article
+@login_required
 def article_delete(request, slug):
     article = Article.objects.get(slug=slug)
     article.delete()
