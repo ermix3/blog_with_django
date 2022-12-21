@@ -2,9 +2,9 @@
 
 {% block content %}
     <h1 class="display-1 text-center text-info my-3 fw-bold">Articles list</h1>
-    <div class="articles">
+    <div class="articles row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
         {% for article in articles %}
-            <div class="card article my-2 shadow">
+            <div class="card article shadow col">
                 <div class="card-header">
                     <h2><a href="{% url 'articles:detail' slug=article.slug %}"
                            class="nav-link text-decoration-underline">{{ article.title }}</a></h2>
